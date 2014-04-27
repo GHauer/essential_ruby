@@ -15,15 +15,15 @@ loan_quotes = [
   { "bank" => "Ash Street Bank", "rate" => 0.011}
 ]
 
-# Given some parameters of the loan, perhaps entered by a user on a web form:
-
 number_of_payments = 180
 principal_amount = 100000.0
+
+# Given some parameters of the loan, perhaps entered by a user on a web form:
 
 # Now, loop through the array of loan quotes using .each:
 #   For each option, tell the user how much the monthly payment will be to that bank.
 #   Re-use the pmt method that you defined in Challenge 1.
 
-# ====================
-# Your code goes here.
-# ====================
+puts "With #{loan_quotes[0]["bank"]} your monthly payment will be #{pmt(loan_quotes[0]["rate"], number_of_payments, principal_amount)}."
+puts "With #{loan_quotes[1]["bank"]} your monthly payment will be #{pmt(loan_quotes[1]["rate"], number_of_payments, principal_amount)}."
+puts "With #{loan_quotes[2]["bank"]} your monthly payment will be #{pmt(loan_quotes[2]["rate"], number_of_payments, principal_amount)}."

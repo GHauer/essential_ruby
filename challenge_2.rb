@@ -24,6 +24,13 @@ principal_amount = 100000.0
 #   For each option, tell the user how much the monthly payment will be to that bank.
 #   Re-use the pmt method that you defined in Challenge 1.
 
+loan_quotes.each do |loan|
+  puts "With #{loan["bank"]} your monthly payment will be #{pmt(loan["rate"], number_of_payments, principal_amount)}."
+end
+
+#Alternative solution without loop (aka each.function)
+=begin
 puts "With #{loan_quotes[0]["bank"]} your monthly payment will be #{pmt(loan_quotes[0]["rate"], number_of_payments, principal_amount)}."
 puts "With #{loan_quotes[1]["bank"]} your monthly payment will be #{pmt(loan_quotes[1]["rate"], number_of_payments, principal_amount)}."
 puts "With #{loan_quotes[2]["bank"]} your monthly payment will be #{pmt(loan_quotes[2]["rate"], number_of_payments, principal_amount)}."
+=end
